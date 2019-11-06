@@ -20,11 +20,11 @@ set_target_properties(libncnn PROPERTIES IMPORTED_LOCATION
 #local
 file(GLOB SRC src/main/cpp/src/*.cpp src/main/cpp/src/*.h src/main/cpp/src/*.c src/main/cpp/src/*.hpp)
 set(SRC_CODE ${SRC})
-add_library(native-lib SHARED ${SRC_CODE})
+add_library(wiseface SHARED ${SRC_CODE})
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI})
 
 
 find_library(log-lib log )
 
 
-target_link_libraries(native-lib libopencv_java4 libncnn ${log-lib} )
+target_link_libraries(wiseface libopencv_java4 libncnn ${log-lib} )
