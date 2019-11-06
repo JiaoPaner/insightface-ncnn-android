@@ -17,10 +17,7 @@ import java.io.InputStream;
 public class MainActivity extends AppCompatActivity {
 
     // Used to load the 'native-lib' library on application startup.
-    static {
-        System.loadLibrary("wiseface");
-    }
-
+    FaceRecognizer exec = new FaceRecognizer();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Example of a call to a native method
         TextView tv = findViewById(R.id.sample_text);
-        loadModel();
+        exec.loadModel();
         Thread thread=new Thread(new Runnable() {
             @Override
             public void run() {
@@ -66,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     //System.out.println("img2:"+strbm2);
 
                     long start = System.currentTimeMillis();
-                    String result = computeDistanceByBase64(strbm,strbm2,0);
+                    String result = exec.computeDistanceByBase64(strbm,strbm2,1);
                     long end = System.currentTimeMillis();
                     long interval = end - start;
                     System.out.println(interval+"");
@@ -76,13 +73,5 @@ public class MainActivity extends AppCompatActivity {
         thread.start();
     }
 
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    public native int loadModel();
-    public native String extractFaceFeatureByBase64(String base64,int detected,int type);
-    public native String computeDistance(String base_emb, String target_emb);
-    public native String computeDistanceByBase64(String base_data,String target_data, int detected);
 
 }
