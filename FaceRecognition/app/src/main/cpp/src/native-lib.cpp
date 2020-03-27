@@ -168,18 +168,23 @@ cv::Mat convertToMat(std::string str) {
     distance < 1:same person or not
 
 */
+/**
+ * 加载模型
+ */
 extern "C"
 JNIEXPORT jint JNICALL
 Java_com_wisesoft_wiseface_FaceRecognizer_loadModel(JNIEnv *env, jobject thiz) {
-    int  reconize = recognizer.loadModel();
-    int  detect = detector.loadModel();
+    int  reconize = recognizer.loadModel();//识别模型
+    int  detect = detector.loadModel();//人脸检测模型
     if(reconize == 1 && detect == 1){
         return jint(1);
     }
 
     return jint (0);
 }
-
+/**
+ * 提取人脸特征
+ */
 extern "C"
 JNIEXPORT jstring JNICALL
 Java_com_wisesoft_wiseface_FaceRecognizer_extractFaceFeatureByBase64(JNIEnv *env, jobject thiz,
@@ -193,7 +198,6 @@ Java_com_wisesoft_wiseface_FaceRecognizer_extractFaceFeatureByBase64(JNIEnv *env
     cv::Mat image;
     try {
         image = Utils::base64ToMat(data);
-        cv::imwrite("/sdcrad/test.jpg",image);
     }
     catch (const std::exception&) {
         cJSON_AddNumberToObject(result, "status", -1);
@@ -210,7 +214,9 @@ Java_com_wisesoft_wiseface_FaceRecognizer_extractFaceFeatureByBase64(JNIEnv *env
     }
     return env->NewStringUTF(resultJson);
 }
-
+/**
+ * 相似度计算
+ */
 extern "C"
 JNIEXPORT jstring JNICALL
 Java_com_wisesoft_wiseface_FaceRecognizer_computeDistance(JNIEnv *env, jobject thiz, jstring base_emb,
