@@ -1,248 +1,470 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f4ca080-171f-4121-b9ab-f81ef5773087" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="45c33ef6-4e26-4d63-b443-ed9b4d597f41" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/insightface-ncnn-android.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/androidTest/java/com/wisesoft/wiseface/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/assets/test2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/assets/test3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/assets/test4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/allocator.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/benchmark.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/blob.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/command.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/cpu.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/gpu.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/layer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/layer_type.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/layer_type_enum.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/mat.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/modelbin.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/net.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/opencv.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/option.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/paramdict.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/pipeline.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/ncnn/platform.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/calib3d.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/calib3d/calib3d.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/calib3d/calib3d_c.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/affine.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/async.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/base.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/bindings_utils.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/bufferpool.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/check.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/core.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/core_c.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda.inl.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/block.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/border_interpolate.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/color.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/common.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/datamov_utils.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/detail/color_detail.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/detail/reduce.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/detail/reduce_key_val.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/detail/transform_detail.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/detail/type_traits_detail.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/detail/vec_distance_detail.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/dynamic_smem.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/emulation.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/filters.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/funcattrib.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/functional.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/limits.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/reduce.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/saturate_cast.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/scan.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/simd_functions.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/transform.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/type_traits.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/utility.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/vec_distance.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/vec_math.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/vec_traits.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/warp.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/warp_reduce.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda/warp_shuffle.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda_stream_accessor.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cuda_types.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cv_cpu_dispatch.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cv_cpu_helper.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cvdef.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cvstd.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cvstd.inl.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/cvstd_wrapper.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/detail/async_promise.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/detail/exception_ptr.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/directx.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/eigen.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/fast_math.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/hal/hal.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/hal/interface.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/hal/intrin.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/hal/intrin_avx.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/hal/intrin_avx512.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/hal/intrin_cpp.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/hal/intrin_forward.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/hal/intrin_neon.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/hal/intrin_sse.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/hal/intrin_sse_em.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/hal/intrin_vsx.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/mat.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/mat.inl.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/matx.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/neon_utils.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/ocl.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/ocl_genbase.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/ocl_defs.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/opencl_info.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/opencl_svm.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/autogenerated/opencl_clamdblas.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/autogenerated/opencl_clamdfft.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/autogenerated/opencl_core.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/autogenerated/opencl_core_wrappers.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/autogenerated/opencl_gl.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/autogenerated/opencl_gl_wrappers.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/opencl_clamdblas.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/opencl_clamdfft.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/opencl_core.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/opencl_core_wrappers.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/opencl_gl.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/opencl_gl_wrappers.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/opencl_svm_20.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/opencl_svm_definitions.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opencl/runtime/opencl_svm_hsa_extension.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/opengl.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/operations.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/optim.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/ovx.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/persistence.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/saturate.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/simd_intrinsics.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/softfloat.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/sse_utils.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/traits.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/types.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/types_c.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/utility.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/utils/allocator_stats.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/utils/allocator_stats.impl.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/utils/filesystem.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/utils/logger.defines.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/utils/logger.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/utils/logtag.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/utils/trace.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/va_intel.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/version.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/core/vsx_utils.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/cvconfig.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/dnn.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/dnn/all_layers.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/dnn/dict.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/dnn/dnn.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/dnn/dnn.inl.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/dnn/layer.details.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/dnn/layer.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/dnn/shape_utils.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/dnn/utils/inference_engine.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/dnn/version.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/features2d.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/features2d/features2d.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/features2d/hal/interface.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/all_indices.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/allocator.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/any.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/autotuned_index.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/composite_index.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/config.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/defines.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/dist.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/dummy.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/dynamic_bitset.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/flann.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/flann_base.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/general.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/ground_truth.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/heap.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/hierarchical_clustering_index.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/index_testing.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/kdtree_index.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/kdtree_single_index.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/kmeans_index.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/linear_index.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/logger.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/lsh_index.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/lsh_table.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/matrix.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/miniflann.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/nn_index.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/object_factory.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/params.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/random.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/result_set.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/sampling.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/saving.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/simplex_downhill.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/flann/timer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/highgui.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/highgui/highgui.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/highgui/highgui_c.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/imgcodecs.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/imgcodecs/imgcodecs.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/imgcodecs/imgcodecs_c.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/imgcodecs/ios.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/imgcodecs/legacy/constants_c.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/imgproc.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/imgproc/detail/gcgraph.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/imgproc/hal/hal.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/imgproc/hal/interface.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/imgproc/imgproc.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/imgproc/imgproc_c.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/imgproc/types_c.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/ml.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/ml/ml.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/ml/ml.inl.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/objdetect.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/objdetect/detection_based_tracker.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/objdetect/objdetect.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/opencv.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/opencv_modules.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/photo.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/photo/cuda.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/photo/legacy/constants_c.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/photo/photo.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/stitching.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/stitching/detail/autocalib.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/stitching/detail/blenders.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/stitching/detail/camera.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/stitching/detail/exposure_compensate.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/stitching/detail/matchers.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/stitching/detail/motion_estimators.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/stitching/detail/seam_finders.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/stitching/detail/timelapsers.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/stitching/detail/util.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/stitching/detail/util_inl.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/stitching/detail/warpers.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/stitching/detail/warpers_inl.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/stitching/warpers.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/video.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/video/background_segm.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/video/legacy/constants_c.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/video/tracking.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/video/video.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/videoio.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/videoio/cap_ios.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/videoio/legacy/constants_c.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/videoio/registry.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/videoio/videoio.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/include/opencv2/videoio/videoio_c.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/cJSON.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/cJSON.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/detector.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/detector.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/face_align.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/native-lib.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/recognizer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/recognizer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/retina.id.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/retina.mem.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/utils.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/utils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/wiseface.id.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/wiseface.mem.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/java/com/wisesoft/wiseface/FaceRecognizer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/java/com/wisesoft/wiseface/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/jniLibs/armeabi-v7a/libncnn.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/jniLibs/armeabi-v7a/libopencv_java4.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/app/src/test/java/com/wisesoft/wiseface/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceRecognition/settings.gradle" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="4d00a0e4209c503f" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>faceobjects</find>
-    </findStrings>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FaceRecognition" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FaceRecognition" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/insightface-ncnn-android.iml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="220" />
-    <option name="y" value="39" />
-    <option name="width" value="1400" />
-    <option name="height" value="907" />
-  </component>
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="insightface-ncnn-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightface-ncnn-android" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insightface-ncnn-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insightface-ncnn-android" type="462c0819:PsiDirectoryNode" />
-              <item name="FaceRecognition" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Non-Source Files'; set:Project Non-Source Files; class com.jetbrains.cidr.lang.search.scopes.ProjectSourcesScopeProvider$NonSourceFilesScope">
-          <expand>
-            <path>
-              <item name="insightface-ncnn-android" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="$PROJECT_DIR$" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="insightface-ncnn-android" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="$PROJECT_DIR$" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="FaceRecognition" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="insightface-ncnn-android" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="$PROJECT_DIR$" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="insightface-ncnn-android" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="$PROJECT_DIR$" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="FaceRecognition" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="insightface-ncnn-android" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="$PROJECT_DIR$" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="FaceRecognition" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectId" id="1hgrdUkHzUCfWSfzPZGPc9qEyJF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="android.sdk.path" value="$PROJECT_DIR$/../../../packages/AndroidSDK" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/packages/andorid-sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1600446333131" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="recommended.upgrade.do.not.ask.for.version" value="3.5.0" />
+    <property name="settings.editor.selected.configurable" value="memory.settings" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2f4ca080-171f-4121-b9ab-f81ef5773087" name="Default Changelist" comment="" />
-      <created>1584096149454</created>
+      <changelist id="45c33ef6-4e26-4d63-b443-ed9b4d597f41" name="Default Changelist" comment="" />
+      <created>1600443664177</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1584096149454</updated>
+      <updated>1600443664177</updated>
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <layout>
-      <window_info id="Captures" order="0" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.27365884" />
-      <window_info id="Structure" order="2" side_tool="true" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="4" />
-      <window_info id="Resources Explorer" order="5" weight="0.32971668" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" visible="true" weight="0.32959184" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="TODO" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Theme Preview" order="1" />
-      <window_info anchor="right" id="Assistant" order="2" weight="0.33505154" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-    </layout>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/src/main/java/com/wisesoft/wiseface/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="53" column="21" lean-forward="true" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/native-lib.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2467">
-          <caret line="195" column="44" selection-start-line="195" selection-start-column="39" selection-end-line="195" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/src/main/java/com/wisesoft/wiseface/FaceRecognizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/src/main/assets/test2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/utils.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/face_align.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/recognizer.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/retina.mem.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2345" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/recognizer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="35" column="55" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/wiseface.id.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="334" column="18" selection-start-line="334" selection-start-column="10" selection-end-line="334" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/retina.id.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="459" column="46" selection-start-line="459" selection-start-column="10" selection-end-line="459" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/detector.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="132" column="24" lean-forward="true" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/src/main/cpp/src/detector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="57" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FaceRecognition/app/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="440" y="158" key="#Notifications" timestamp="1600446394157">
+      <screen x="0" y="23" width="1680" height="940" />
+    </state>
+    <state x="440" y="158" key="#Notifications/0.23.1680.940@0.23.1680.940" timestamp="1600446394157" />
+    <state x="440" y="158" key="#Project_Structure" timestamp="1600444191217">
+      <screen x="0" y="23" width="1680" height="940" />
+    </state>
+    <state x="440" y="158" key="#Project_Structure/0.23.1680.940@0.23.1680.940" timestamp="1600444191217" />
+    <state width="1638" height="209" key="GridCell.Tab.0.bottom" timestamp="1600600899370">
+      <screen x="0" y="23" width="1680" height="940" />
+    </state>
+    <state width="1638" height="209" key="GridCell.Tab.0.bottom/0.23.1680.940@0.23.1680.940" timestamp="1600600899370" />
+    <state width="1638" height="209" key="GridCell.Tab.0.center" timestamp="1600600899369">
+      <screen x="0" y="23" width="1680" height="940" />
+    </state>
+    <state width="1638" height="209" key="GridCell.Tab.0.center/0.23.1680.940@0.23.1680.940" timestamp="1600600899369" />
+    <state width="1638" height="209" key="GridCell.Tab.0.left" timestamp="1600600899368">
+      <screen x="0" y="23" width="1680" height="940" />
+    </state>
+    <state width="1638" height="209" key="GridCell.Tab.0.left/0.23.1680.940@0.23.1680.940" timestamp="1600600899368" />
+    <state width="1638" height="209" key="GridCell.Tab.0.right" timestamp="1600600899369">
+      <screen x="0" y="23" width="1680" height="940" />
+    </state>
+    <state width="1638" height="209" key="GridCell.Tab.0.right/0.23.1680.940@0.23.1680.940" timestamp="1600600899369" />
+    <state x="498" y="325" key="com.intellij.ide.util.TipDialog" timestamp="1600443671779">
+      <screen x="0" y="23" width="1680" height="940" />
+    </state>
+    <state x="498" y="325" key="com.intellij.ide.util.TipDialog/0.23.1680.940@0.23.1680.940" timestamp="1600443671779" />
   </component>
 </project>

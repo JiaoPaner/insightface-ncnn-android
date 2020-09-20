@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     String result = exec.computeDistanceByBase64(strbm,strbm2,1);
                     long end = System.currentTimeMillis();
                     long interval = end - start;
-                    System.out.println(interval+"");
+                    System.out.println("interval："+interval);
                     System.out.println(result);
             }
         });
