@@ -15,8 +15,8 @@ android {
                 cppFlags "-std=c++11 -frtti -fexceptions"
                 abiFilters 'armeabi-v7a'
                 arguments "-DANDROID_STL=c++_shared"
-                cFlags "-fopenmp -O2 -fvisibility=hidden -fomit-frame-pointer -fstrict-aliasing -ffunction-sections -fdata-sections -ffast-math "
-                cppFlags "-fopenmp -O2 -fvisibility=hidden -fvisibility-inlines-hidden -fomit-frame-pointer -fstrict-aliasing -ffunction-sections -fdata-sections -ffast-math "
+                cFlags "-fopenmp -static-openmp -O2 -fvisibility=hidden -fomit-frame-pointer -fstrict-aliasing -ffunction-sections -fdata-sections -ffast-math "
+                cppFlags "-fopenmp -static-openmp -O2 -fvisibility=hidden -fvisibility-inlines-hidden -fomit-frame-pointer -fstrict-aliasing -ffunction-sections -fdata-sections -ffast-math "
             }
         }
         ndk{

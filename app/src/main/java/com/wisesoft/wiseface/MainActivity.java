@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                     Bitmap img1 = null;
                     try {
-                        InputStream is = getAssets().open("test2.png");
+                        InputStream is = getAssets().open("test1.jpeg");
                         img1 = BitmapFactory.decodeStream(is);
                         is.close();
                     } catch (IOException e) {
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Bitmap img2 = null;
                     try {
-                        InputStream is2 = getAssets().open("test3.png");
+                        InputStream is2 = getAssets().open("test2.jpeg");
                         img2 = BitmapFactory.decodeStream(is2);
                         is2.close();
                     } catch (IOException e) {
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     //System.out.println("img2:"+strbm2);
 
                     long start = System.currentTimeMillis();
-                    String result = exec.computeDistanceByBase64(strbm,strbm2,1);
+                    String result = exec.computeDistanceByBase64(strbm,strbm2,0);
                     long end = System.currentTimeMillis();
                     long interval = end - start;
                     System.out.println("interval："+interval);
