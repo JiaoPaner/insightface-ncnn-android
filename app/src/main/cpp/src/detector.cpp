@@ -5,11 +5,22 @@
 #include "detector.h"
 #include "retina.id.h"
 #include "retina.mem.h"
+#include "mask_retina.id.h"
+#include "mask_retina.mem.h"
 #include "face_align.hpp"
 
 int Detector::loadModel() {
     int param = this->net.load_param(retina_param_bin);
     int model = this->net.load_model(retina_bin);
+    if(param > 0 && model > 0){
+        return 1;
+    }
+    return 0;
+}
+
+int Detector::loadMaskModel() {
+    int param = this->net.load_param(mask_retinaface_param_bin);
+    int model = this->net.load_model(mask_retinaface_bin);
     if(param > 0 && model > 0){
         return 1;
     }
@@ -36,6 +47,7 @@ std::vector<cv::Mat> Detector::createAlignFace(cv::Mat &img, int type) {
                     index = i;
                 }
             }
+
             FaceObject face_box = face_boxs[index];
             //cv::rectangle(img, cv::Point(face_box.x0, face_box.y0), cv::Point(face_box.x1, face_box.y1), cv::Scalar(0, 255, 0), 2);
             //cv::imshow("img",img);
@@ -82,7 +94,7 @@ std::vector<cv::Mat> Detector::createAlignFace(cv::Mat &img, int type) {
     return aligned_faces;
 }
 
-int Detector::detect_retinaface(const cv::Mat &bgr, std::vector<FaceObject> &faceobjects) {
+void Detector::detect_retinaface(const cv::Mat &bgr, std::vector<FaceObject> &faceobjects) {
     const float prob_threshold = 0.8f;
     const float nms_threshold = 0.4f;
 
@@ -190,8 +202,6 @@ int Detector::detect_retinaface(const cv::Mat &bgr, std::vector<FaceObject> &fac
         faceobjects[i].rect.width = x1 - x0;
         faceobjects[i].rect.height = y1 - y0;
     }
-
-    return 0;
 }
 
 ncnn::Mat Detector::generate_anchors(int base_size, const ncnn::Mat &ratios, const ncnn::Mat &scales) {
@@ -379,6 +389,208 @@ void Detector::nms_sorted_bboxes(const std::vector<FaceObject> &faceobjects, std
 float Detector::intersection_area(const FaceObject &a, const FaceObject &b) {
     cv::Rect_<float> inter = a.rect & b.rect;
     return inter.area();
+}
+
+/**
+ * mask detection
+ */
+
+void Detector::detect_maskface(const cv::Mat &bgr, std::vector<FaceObject> &faceobjects) {
+    const float prob_threshold = 0.8f;
+    const float nms_threshold = 0.4f;
+    const float mask_threshold = 0.2f;
+
+    int img_w = bgr.cols;
+    int img_h = bgr.rows;
+
+    ncnn::Mat in = ncnn::Mat::from_pixels(bgr.data, ncnn::Mat::PIXEL_BGR2RGB, img_w, img_h);
+
+    ncnn::Extractor ex = this->net.create_extractor();
+
+    ex.input(mask_retinaface_param_id::BLOB_data, in);
+
+    std::vector<FaceObject> faceproposals;
+    {
+        ncnn::Mat score_blob, bbox_blob, landmark_blob,type_blob;
+        ex.extract(mask_retinaface_param_id::BLOB_face_rpn_cls_prob_reshape_stride32, score_blob);
+        ex.extract(mask_retinaface_param_id::BLOB_face_rpn_bbox_pred_stride32, bbox_blob);
+        ex.extract(mask_retinaface_param_id::BLOB_face_rpn_landmark_pred_stride32, landmark_blob);
+        ex.extract(mask_retinaface_param_id::BLOB_face_rpn_type_prob_reshape_stride32, type_blob);
+
+        const int base_size = 16;
+        const int feat_stride = 32;
+        ncnn::Mat ratios(1);
+        ratios[0] = 1.f;
+        ncnn::Mat scales(2);
+        scales[0] = 32.f;
+        scales[1] = 16.f;
+        ncnn::Mat anchors = generate_anchors(base_size, ratios, scales);
+
+        std::vector<FaceObject> faceobjects32;
+        generate_mask_proposals(anchors, feat_stride, score_blob, bbox_blob, landmark_blob,type_blob,prob_threshold,mask_threshold,faceobjects32);
+
+        faceproposals.insert(faceproposals.end(), faceobjects32.begin(), faceobjects32.end());
+    }
+
+    // stride 16
+    {
+        ncnn::Mat score_blob, bbox_blob, landmark_blob,type_blob;
+        ex.extract(mask_retinaface_param_id::BLOB_face_rpn_cls_prob_reshape_stride16, score_blob);
+        ex.extract(mask_retinaface_param_id::BLOB_face_rpn_bbox_pred_stride16, bbox_blob);
+        ex.extract(mask_retinaface_param_id::BLOB_face_rpn_landmark_pred_stride16, landmark_blob);
+        ex.extract(mask_retinaface_param_id::BLOB_face_rpn_type_prob_reshape_stride16, type_blob);
+
+        const int base_size = 16;
+        const int feat_stride = 16;
+        ncnn::Mat ratios(1);
+        ratios[0] = 1.f;
+        ncnn::Mat scales(2);
+        scales[0] = 8.f;
+        scales[1] = 4.f;
+        ncnn::Mat anchors = generate_anchors(base_size, ratios, scales);
+
+        std::vector<FaceObject> faceobjects16;
+        generate_mask_proposals(anchors, feat_stride, score_blob, bbox_blob, landmark_blob,type_blob,prob_threshold,mask_threshold,faceobjects16);
+
+        faceproposals.insert(faceproposals.end(), faceobjects16.begin(), faceobjects16.end());
+    }
+
+    // stride 8
+    {
+        ncnn::Mat score_blob, bbox_blob, landmark_blob,type_blob;
+        ex.extract(mask_retinaface_param_id::BLOB_face_rpn_cls_prob_reshape_stride8, score_blob);
+        ex.extract(mask_retinaface_param_id::BLOB_face_rpn_bbox_pred_stride8, bbox_blob);
+        ex.extract(mask_retinaface_param_id::BLOB_face_rpn_landmark_pred_stride8, landmark_blob);
+        ex.extract(mask_retinaface_param_id::BLOB_face_rpn_type_prob_reshape_stride8, type_blob);
+
+        const int base_size = 16;
+        const int feat_stride = 8;
+        ncnn::Mat ratios(1);
+        ratios[0] = 1.f;
+        ncnn::Mat scales(2);
+        scales[0] = 2.f;
+        scales[1] = 1.f;
+        ncnn::Mat anchors = generate_anchors(base_size, ratios, scales);
+
+        std::vector<FaceObject> faceobjects8;
+        generate_mask_proposals(anchors, feat_stride, score_blob, bbox_blob, landmark_blob,type_blob,prob_threshold,mask_threshold,faceobjects8);
+
+        faceproposals.insert(faceproposals.end(), faceobjects8.begin(), faceobjects8.end());
+    }
+
+    // sort all proposals by score from highest to lowest
+    qsort_descent_inplace(faceproposals);
+
+    // apply nms with nms_threshold
+    std::vector<int> picked;
+    nms_sorted_bboxes(faceproposals, picked, nms_threshold);
+
+    int face_count = picked.size();
+
+    faceobjects.resize(face_count);
+    for (int i = 0; i < face_count; i++){
+        faceobjects[i] = faceproposals[ picked[i] ];
+
+        // clip to image size
+        float x0 = faceobjects[i].rect.x;
+        float y0 = faceobjects[i].rect.y;
+        float x1 = x0 + faceobjects[i].rect.width;
+        float y1 = y0 + faceobjects[i].rect.height;
+
+        x0 = std::max(std::min(x0, (float)img_w - 1), 0.f);
+        y0 = std::max(std::min(y0, (float)img_h - 1), 0.f);
+        x1 = std::max(std::min(x1, (float)img_w - 1), 0.f);
+        y1 = std::max(std::min(y1, (float)img_h - 1), 0.f);
+
+        faceobjects[i].rect.x = x0;
+        faceobjects[i].rect.y = y0;
+        faceobjects[i].rect.width = x1 - x0;
+        faceobjects[i].rect.height = y1 - y0;
+    }
+}
+
+void Detector::generate_mask_proposals(const ncnn::Mat &anchors, int feat_stride,
+                                       const ncnn::Mat &score_blob, const ncnn::Mat &bbox_blob,
+                                       const ncnn::Mat &landmark_blob, const ncnn::Mat &type_blob,
+                                       float prob_threshold,float mask_threshold,
+                                       std::vector<FaceObject> &faceobjects) {
+    int w = score_blob.w;
+    int h = score_blob.h;
+
+    // generate face proposal from bbox deltas and shifted anchors
+    const int num_anchors = anchors.h;
+
+    for (int q=0; q<num_anchors; q++){
+        const float* anchor = anchors.row(q);
+
+        const ncnn::Mat score = score_blob.channel(q + num_anchors);
+        const ncnn::Mat bbox = bbox_blob.channel_range(q * 4, 4);
+        const ncnn::Mat landmark = landmark_blob.channel_range(q * 10, 10);
+        const ncnn::Mat type = type_blob.channel(q + 2 * num_anchors);
+
+        // shifted anchor
+        float anchor_y = anchor[1];
+
+        float anchor_w = anchor[2] - anchor[0];
+        float anchor_h = anchor[3] - anchor[1];
+
+        for (int i=0; i<h; i++){
+            float anchor_x = anchor[0];
+            for (int j=0; j<w; j++){
+                int index = i * w + j;
+
+                float prob = score[index];
+                float face_type = type[index];
+
+                if (prob >= prob_threshold){
+                    // apply center size
+                    float dx = bbox.channel(0)[index];
+                    float dy = bbox.channel(1)[index];
+                    float dw = bbox.channel(2)[index];
+                    float dh = bbox.channel(3)[index];
+
+                    float cx = anchor_x + anchor_w * 0.5f;
+                    float cy = anchor_y + anchor_h * 0.5f;
+
+                    float pb_cx = cx + anchor_w * dx;
+                    float pb_cy = cy + anchor_h * dy;
+
+                    float pb_w = anchor_w * exp(dw);
+                    float pb_h = anchor_h * exp(dh);
+
+                    float x0 = pb_cx - pb_w * 0.5f;
+                    float y0 = pb_cy - pb_h * 0.5f;
+                    float x1 = pb_cx + pb_w * 0.5f;
+                    float y1 = pb_cy + pb_h * 0.5f;
+
+                    FaceObject obj;
+                    obj.rect.x = x0;
+                    obj.rect.y = y0;
+                    obj.rect.width = x1 - x0 + 1;
+                    obj.rect.height = y1 - y0 + 1;
+                    obj.landmark[0].x = cx + (anchor_w + 1) * landmark.channel(0)[index];
+                    obj.landmark[0].y = cy + (anchor_h + 1) * landmark.channel(1)[index];
+                    obj.landmark[1].x = cx + (anchor_w + 1) * landmark.channel(2)[index];
+                    obj.landmark[1].y = cy + (anchor_h + 1) * landmark.channel(3)[index];
+                    obj.landmark[2].x = cx + (anchor_w + 1) * landmark.channel(4)[index];
+                    obj.landmark[2].y = cy + (anchor_h + 1) * landmark.channel(5)[index];
+                    obj.landmark[3].x = cx + (anchor_w + 1) * landmark.channel(6)[index];
+                    obj.landmark[3].y = cy + (anchor_h + 1) * landmark.channel(7)[index];
+                    obj.landmark[4].x = cx + (anchor_w + 1) * landmark.channel(8)[index];
+                    obj.landmark[4].y = cy + (anchor_h + 1) * landmark.channel(9)[index];
+                    obj.prob = prob;
+                    obj.type = (face_type > mask_threshold);
+
+                    faceobjects.push_back(obj);
+                }
+
+                anchor_x += feat_stride;
+            }
+
+            anchor_y += feat_stride;
+        }
+    }
+
 }
 
 

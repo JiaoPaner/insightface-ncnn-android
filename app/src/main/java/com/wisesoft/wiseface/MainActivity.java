@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                     Bitmap img1 = null;
                     try {
-                        InputStream is = getAssets().open("test1.jpeg");
+                        InputStream is = getAssets().open("mask_test.jpeg");
                         img1 = BitmapFactory.decodeStream(is);
                         is.close();
                     } catch (IOException e) {
@@ -63,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
                     //System.out.println("img2:"+strbm2);
 
                     long start = System.currentTimeMillis();
-                    String result = exec.computeDistanceByBase64(strbm,strbm2,0);
+                    //String result = exec.computeDistanceByBase64(strbm,strbm2,0);
+                    String result = exec.detectMaskByBase64(strbm,0);
                     long end = System.currentTimeMillis();
                     long interval = end - start;
                     System.out.println("interval："+interval);

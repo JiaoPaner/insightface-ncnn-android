@@ -176,12 +176,162 @@ JNIEXPORT jint JNICALL
 Java_com_wisesoft_wiseface_FaceRecognizer_loadModel(JNIEnv *env, jobject thiz) {
     int  reconize = recognizer.loadModel();//识别模型
     int  detect = detector.loadModel();//人脸检测模型
-    if(reconize == 1 && detect == 1){
+    int  mask = detector.loadMaskModel();//口罩检测模型
+    if(reconize == 1 && detect == 1 && mask == 1){
         return jint(1);
     }
 
     return jint (0);
 }
+
+/**
+ * 人脸检测
+ */
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_com_wisesoft_wiseface_FaceRecognizer_detectFaceByBase64(JNIEnv *env, jobject thiz,
+                                                             jstring base64, jint type) {
+    const char* str = env->GetStringUTFChars(base64, JNI_FALSE);
+
+    std::string data(str);
+    cJSON  *result = cJSON_CreateObject(), *items = cJSON_CreateArray();
+    cv::Mat image;
+    try {
+        image = Utils::base64ToMat(data);
+        std::vector<FaceObject> face_boxs;
+        detector.detect_retinaface(image,face_boxs);
+        int index = 0;
+        float max_box = 0;
+
+        if (type == 1) {
+            if (face_boxs.size() > 0) {
+                for (int i = 0; i < face_boxs.size(); i++) {
+                    FaceObject face_box = face_boxs[i];
+                    float box = (face_box.rect.width + face_box.rect.height) / 2;
+                    if (box > max_box) {
+                        max_box = box;
+                        index = i;
+                    }
+                }
+                FaceObject face_box = face_boxs[index];
+                cJSON  *item = cJSON_CreateObject();
+                cJSON_AddNumberToObject(item,"score",face_box.prob);
+                cJSON  *location = cJSON_CreateObject();
+                cJSON_AddNumberToObject(location,"x",face_box.rect.x);
+                cJSON_AddNumberToObject(location,"y",face_box.rect.y);
+                cJSON_AddNumberToObject(location,"width",face_box.rect.width);
+                cJSON_AddNumberToObject(location,"height",face_box.rect.height);
+                cJSON_AddItemToObject(item,"location",location);
+                cJSON_AddItemToArray(items,item);
+            }
+        }
+        else{
+            for (int i = 0; i < face_boxs.size(); i++) {
+                FaceObject face_box = face_boxs[i];
+                if (face_box.prob * 100 < 70)
+                    continue;
+                cJSON  *item = cJSON_CreateObject();
+                cJSON_AddNumberToObject(item,"score",face_box.prob);
+                cJSON  *location = cJSON_CreateObject();
+                cJSON_AddNumberToObject(location,"x",face_box.rect.x);
+                cJSON_AddNumberToObject(location,"y",face_box.rect.y);
+                cJSON_AddNumberToObject(location,"width",face_box.rect.width);
+                cJSON_AddNumberToObject(location,"height",face_box.rect.height);
+                cJSON_AddItemToObject(item,"location",location);
+                cJSON_AddItemToArray(items,item);
+            }
+        }
+
+        cJSON_AddNumberToObject(result, "code", 1);
+        cJSON_AddStringToObject(result, "msg", "success");
+        cJSON_AddItemToObject(result, "data", items);
+        char *resultJson = cJSON_PrintUnformatted(result);
+        return env->NewStringUTF(resultJson);
+    }
+    catch (const std::exception&) {
+        cJSON_AddNumberToObject(result, "code", -1);
+        cJSON_AddStringToObject(result, "msg", "error");
+        cJSON_AddItemToObject(result, "data", items);
+        char *resultJson = cJSON_PrintUnformatted(result);
+        return env->NewStringUTF(resultJson);
+    }
+}
+
+/**
+ * 口罩检测
+ */
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_com_wisesoft_wiseface_FaceRecognizer_detectMaskByBase64(JNIEnv *env, jobject thiz,
+                                                             jstring base64, jint type) {
+    const char* str = env->GetStringUTFChars(base64, JNI_FALSE);
+
+    std::string data(str);
+    cJSON  *result = cJSON_CreateObject(), *items = cJSON_CreateArray();
+    cv::Mat image;
+    try {
+        image = Utils::base64ToMat(data);
+        std::vector<FaceObject> face_boxs;
+        detector.detect_maskface(image,face_boxs);
+        int index = 0;
+        float max_box = 0;
+
+        if (type == 1) {
+            if (face_boxs.size() > 0) {
+                for (int i = 0; i < face_boxs.size(); i++) {
+                    FaceObject face_box = face_boxs[i];
+                    float box = (face_box.rect.width + face_box.rect.height) / 2;
+                    if (box > max_box) {
+                        max_box = box;
+                        index = i;
+                    }
+                }
+                FaceObject face_box = face_boxs[index];
+                cJSON  *item = cJSON_CreateObject();
+                cJSON_AddNumberToObject(item,"score",face_box.prob);
+                cJSON_AddNumberToObject(item,"type",face_box.type);
+                cJSON  *location = cJSON_CreateObject();
+                cJSON_AddNumberToObject(location,"x",face_box.rect.x);
+                cJSON_AddNumberToObject(location,"y",face_box.rect.y);
+                cJSON_AddNumberToObject(location,"width",face_box.rect.width);
+                cJSON_AddNumberToObject(location,"height",face_box.rect.height);
+                cJSON_AddItemToObject(item,"location",location);
+                cJSON_AddItemToArray(items,item);
+            }
+        }
+        else{
+            for (int i = 0; i < face_boxs.size(); i++) {
+                FaceObject face_box = face_boxs[i];
+                if (face_box.prob * 100 < 70)
+                    continue;
+                cJSON  *item = cJSON_CreateObject();
+                cJSON_AddNumberToObject(item,"score",face_box.prob);
+                cJSON_AddNumberToObject(item,"type",face_box.type);
+                cJSON  *location = cJSON_CreateObject();
+                cJSON_AddNumberToObject(location,"x",face_box.rect.x);
+                cJSON_AddNumberToObject(location,"y",face_box.rect.y);
+                cJSON_AddNumberToObject(location,"width",face_box.rect.width);
+                cJSON_AddNumberToObject(location,"height",face_box.rect.height);
+                cJSON_AddItemToObject(item,"location",location);
+                cJSON_AddItemToArray(items,item);
+            }
+        }
+
+        cJSON_AddNumberToObject(result, "code", 1);
+        cJSON_AddStringToObject(result, "msg", "success");
+        cJSON_AddItemToObject(result, "data", items);
+        char *resultJson = cJSON_PrintUnformatted(result);
+        return env->NewStringUTF(resultJson);
+    }
+    catch (const std::exception&) {
+        cJSON_AddNumberToObject(result, "code", -1);
+        cJSON_AddStringToObject(result, "msg", "error");
+        cJSON_AddItemToObject(result, "data", items);
+        char *resultJson = cJSON_PrintUnformatted(result);
+        return env->NewStringUTF(resultJson);
+    }
+}
+
 /**
  * 提取人脸特征
  */
@@ -198,6 +348,13 @@ Java_com_wisesoft_wiseface_FaceRecognizer_extractFaceFeatureByBase64(JNIEnv *env
     cv::Mat image;
     try {
         image = Utils::base64ToMat(data);
+        if (detected == 1) {
+            resultJson = extractFaceFeatureByFace(image);
+        }
+        else {
+            resultJson = extractFaceFeatureByImage(image,type);
+        }
+        return env->NewStringUTF(resultJson);
     }
     catch (const std::exception&) {
         cJSON_AddNumberToObject(result, "status", -1);
@@ -206,13 +363,6 @@ Java_com_wisesoft_wiseface_FaceRecognizer_extractFaceFeatureByBase64(JNIEnv *env
         resultJson = cJSON_PrintUnformatted(result);
         return env->NewStringUTF(resultJson);
     }
-    if (detected == 1) {
-        resultJson = extractFaceFeatureByFace(image);
-    }
-    else {
-        resultJson = extractFaceFeatureByImage(image,type);
-    }
-    return env->NewStringUTF(resultJson);
 }
 /**
  * 相似度计算
@@ -268,6 +418,8 @@ Java_com_wisesoft_wiseface_FaceRecognizer_computeDistanceByBase64(JNIEnv *env, j
     try {
         base = Utils::base64ToMat(base_str);
         target = Utils::base64ToMat(target_str);
+        resultJson = computeDistanceByMat(base, target, detected);
+        return env->NewStringUTF(resultJson);
     }
     catch (const std::exception&) {
         cJSON_AddNumberToObject(result, "status", -1);
@@ -277,6 +429,5 @@ Java_com_wisesoft_wiseface_FaceRecognizer_computeDistanceByBase64(JNIEnv *env, j
         resultJson = cJSON_PrintUnformatted(result);
         return env->NewStringUTF(resultJson);
     }
-    resultJson = computeDistanceByMat(base, target, detected);
-    return env->NewStringUTF(resultJson);
+
 }
