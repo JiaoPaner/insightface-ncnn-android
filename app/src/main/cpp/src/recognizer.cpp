@@ -3,12 +3,12 @@
 //
 
 #include "recognizer.h"
-#include "wiseface.mem.h"
-#include "wiseface.id.h"
+#include "detface.mem.h"
+#include "detface.id.h"
 
 int Recognizer::loadModel() {
-    int param = this->net.load_param(wiseface_param_bin);
-    int model = this->net.load_model(wiseface_bin);
+    int param = this->net.load_param(detface_param_bin);
+    int model = this->net.load_model(detface_bin);
     if(param > 0 && model > 0){
         return 1;
     }
@@ -32,8 +32,8 @@ cv::Mat Recognizer::extractFeature(const cv::Mat &face) {
     ncnn::Mat in = ncnn::Mat::from_pixels(image.data, ncnn::Mat::PIXEL_BGR2RGB, image.cols, image.rows);
 
     ncnn::Mat out;
-    ex.input(wiseface_param_id::BLOB_data, in);
-    int status = ex.extract(wiseface_param_id::BLOB_fc1, out);
+    ex.input(detface_param_id::BLOB_data, in);
+    int status = ex.extract(detface_param_id::BLOB_fc1, out);
 
     if(status == 0){
         for (int i = 0; i < this->feature_dim; i++){
