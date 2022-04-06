@@ -1,4 +1,4 @@
-package com.wisesoft.wiseface;
+package com.jiaopan.face;
 
 import org.junit.Test;
 

@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.wisesoft.wiseface"
+        applicationId "com.jiaopan.face"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -46,7 +46,7 @@ android {
 /*
     task makeJar(type: Copy) {
 
-        delete'build/libs/wiseface.jar'
+        delete'build/libs/facelib.jar'
 
         from('build/intermediates/packaged-classes/release/')
 
@@ -54,7 +54,7 @@ android {
 
         include('classes.jar')
 
-        rename ('classes.jar','wiseface.jar')
+        rename ('classes.jar','facelib.jar')
     }
 
     makeJar.dependsOn(build)

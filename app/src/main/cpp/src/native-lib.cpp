@@ -173,7 +173,7 @@ cv::Mat convertToMat(std::string str) {
  */
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_wisesoft_wiseface_FaceRecognizer_loadModel(JNIEnv *env, jobject thiz) {
+Java_com_jiaopan_face_FaceRecognizer_loadModel(JNIEnv *env, jobject thiz) {
     int  reconize = recognizer.loadModel();//识别模型
     int  detect = detector.loadModel();//人脸检测模型
     int  mask = detector.loadMaskModel();//口罩检测模型
@@ -189,7 +189,7 @@ Java_com_wisesoft_wiseface_FaceRecognizer_loadModel(JNIEnv *env, jobject thiz) {
  */
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_com_wisesoft_wiseface_FaceRecognizer_detectFaceByBase64(JNIEnv *env, jobject thiz,
+Java_com_jiaopan_face_FaceRecognizer_detectFaceByBase64(JNIEnv *env, jobject thiz,
                                                              jstring base64, jint type) {
     const char* str = env->GetStringUTFChars(base64, JNI_FALSE);
 
@@ -262,7 +262,7 @@ Java_com_wisesoft_wiseface_FaceRecognizer_detectFaceByBase64(JNIEnv *env, jobjec
  */
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_com_wisesoft_wiseface_FaceRecognizer_detectMaskByBase64(JNIEnv *env, jobject thiz,
+Java_com_jiaopan_face_FaceRecognizer_detectMaskByBase64(JNIEnv *env, jobject thiz,
                                                              jstring base64, jint type) {
     const char* str = env->GetStringUTFChars(base64, JNI_FALSE);
 
@@ -337,7 +337,7 @@ Java_com_wisesoft_wiseface_FaceRecognizer_detectMaskByBase64(JNIEnv *env, jobjec
  */
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_com_wisesoft_wiseface_FaceRecognizer_extractFaceFeatureByBase64(JNIEnv *env, jobject thiz,
+Java_com_jiaopan_face_FaceRecognizer_extractFaceFeatureByBase64(JNIEnv *env, jobject thiz,
                                                                    jstring base64, jint detected,
                                                                    jint type) {
     const char* str = env->GetStringUTFChars(base64, JNI_FALSE);
@@ -369,7 +369,7 @@ Java_com_wisesoft_wiseface_FaceRecognizer_extractFaceFeatureByBase64(JNIEnv *env
  */
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_com_wisesoft_wiseface_FaceRecognizer_computeDistance(JNIEnv *env, jobject thiz, jstring base_emb,
+Java_com_jiaopan_face_FaceRecognizer_computeDistance(JNIEnv *env, jobject thiz, jstring base_emb,
                                                         jstring target_emb) {
     cJSON  *result = cJSON_CreateObject();
     char *resultJson;
@@ -404,7 +404,7 @@ Java_com_wisesoft_wiseface_FaceRecognizer_computeDistance(JNIEnv *env, jobject t
 
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_com_wisesoft_wiseface_FaceRecognizer_computeDistanceByBase64(JNIEnv *env, jobject thiz,
+Java_com_jiaopan_face_FaceRecognizer_computeDistanceByBase64(JNIEnv *env, jobject thiz,
                                                                 jstring base_data,
                                                                 jstring target_data,
                                                                 jint detected) {

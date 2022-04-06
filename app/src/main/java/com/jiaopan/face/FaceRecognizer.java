@@ -1,8 +1,8 @@
-package com.wisesoft.wiseface;
+package com.jiaopan.face;
 
 public class FaceRecognizer {
     static {
-        System.loadLibrary("wiseface");
+        System.loadLibrary("facelib");
     }
     public native int loadModel();
     public native String detectFaceByBase64(String base64,int type);

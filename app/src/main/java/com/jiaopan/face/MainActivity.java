@@ -1,4 +1,4 @@
-package com.wisesoft.wiseface;
+package com.jiaopan.face;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Base64;
-import android.util.Log;
 import android.widget.TextView;
 
 import java.io.ByteArrayOutputStream;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
